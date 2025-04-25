@@ -23,22 +23,22 @@ public class TP6 {
 
             if (m.matches()) {
                 if (m.group(1).length() == 2) {
-                    System.out.println(" \"" + word2 + "\" rhymes with \"" + word1 + "\"!");
+                    System.out.println( word2 + "\"rhymes with \"" + word1 + "\"!");
                 } else {
-                    System.out.println("Nope! \"" + word2 + "\" does not rhyme with \"" + word1 + "\".");
+                    System.out.println( word2 + "\"does not rhyme with \"" + word1 + "\".");
                 }
             } else if (word2.endsWith(sub)) {
-                System.out.println(" Hmm... I'm not sure! Sorry!");
+                System.out.println("... I'm not sure! Sorry!");
             } else {
-                System.out.println("Nope! \"" + word2 + "\" does not rhyme with \"" + word1 + "\".");
+                System.out.println(word2 + "\"does not rhyme with \"" + word1 + "\".");
             }
 
-            System.out.print("\n Want to play again? (yes/no): ");
+            System.out.print("\nWant to play again? (yes/no): ");
             playAgain = s.nextLine().trim().toLowerCase();
             System.out.println();
 
         } while (playAgain.equals("yes"));
 
-        System.out.println(" Thanks for playing Rhyme Time! Goodbye!");
+        System.out.println(" Thanks for playing!");
     }
 }
