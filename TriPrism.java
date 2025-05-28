@@ -5,6 +5,12 @@ public class TriPrism<T extends Number> {
     private T base;
     private T height;
 
+    public void setValues(T length, T base, T height) {
+        this.length = length;
+        this.base = base;
+        this.height = height;
+    }
+
     public T getLength() {
         return length;
     }
