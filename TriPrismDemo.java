@@ -1,44 +1,44 @@
 
 import java.util.Scanner;
 
-
 public class TriPrismDemo {
 
     public static void main(String[] args) {
-
         Scanner scanner = new Scanner(System.in);
 
-        TriPrism<Integer> tp1 = new TriPrism<>();
-        System.out.println("Enter values for Triangular Prism 1 Integer:");
+        System.out.println("Enter for Triangular Prism 1:");
         System.out.print("Length: ");
-        tp1.setLength(scanner.nextInt());
+        int length1 = scanner.nextInt();
         System.out.print("Base: ");
-        tp1.setBase(scanner.nextInt());
+        int base1 = scanner.nextInt();
         System.out.print("Height: ");
-        tp1.setHeight(scanner.nextInt());
+        int height1 = scanner.nextInt();
+        
+        TriPrism<Integer> tp1 = new TriPrism<>();
+        tp1.setValues(length1, base1, height1);
 
-        System.out.println("Triangular Prism 1");
+        System.out.println("\nTriangular Prism 1");
         System.out.println("Length: " + tp1.getLength());
         System.out.println("Base: " + tp1.getBase());
         System.out.println("Height: " + tp1.getHeight());
-        System.out.println("The volume of the triangular prism is " + tp1.calculateVolume());
-        System.out.println();
+        System.out.println("The volume of the triangualar prism is " + tp1.calculateVolume());
+
+        System.out.println("\nEnter for Triangular Prism 2 Double values:");
+        System.out.print("Length: ");
+        double length2 = scanner.nextDouble();
+        System.out.print("Base: ");
+        double base2 = scanner.nextDouble();
+        System.out.print("Height: ");
+        double height2 = scanner.nextDouble();
 
         TriPrism<Double> tp2 = new TriPrism<>();
-        System.out.println("Enter values for Triangular Prism 2 Double:");
-        System.out.print("Length: ");
-        tp2.setLength(scanner.nextDouble());
-        System.out.print("Base: ");
-        tp2.setBase(scanner.nextDouble());
-        System.out.print("Height: ");
-        tp2.setHeight(scanner.nextDouble());
+        tp2.setValues(length2, base2, height2);
 
-        System.out.println("Triangular Prism 2");
-        System.out.printf("Length: %.2f\n", tp2.getLength());
-        System.out.printf("Base: %.2f\n", tp2.getBase());
-        System.out.printf("Height: %.2f\n", tp2.getHeight());
-        System.out.printf("The volume of the triangular prism is %.4f\n", tp2.calculateVolume());
+        System.out.println("\nTriangular Prism 2");
+        System.out.println("Length: " + tp2.getLength());
+        System.out.println("Base: " + tp2.getBase());
+        System.out.println("Height: " + tp2.getHeight());
+        System.out.println("The volume of the triangualar prism is " + tp2.calculateVolume());
 
-        scanner.close();
     }
 }
